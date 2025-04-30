@@ -1,0 +1,20 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<section class="about-section py-5" style="background: linear-gradient(135deg, #f0f9ff, #cbebff);">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 animate__animated animate__fadeInLeft">
+                <img src="{% static 'images/about.jpeg' %}" class="img-fluid rounded" alt="About Us">
+            </div>
+            <div class="col-md-6 animate__animated animate__fadeInRight">
+                <h1>About ContentAI</h1>
+                <p class="lead">
+                    At ContentAI, we leverage cutting-edge artificial intelligence to transform content creation. Our innovative platform empowers marketers and content creators by providing high-quality, engaging, and SEO-friendly copy that drives results.
+                </p>
+                <p>
+                    With our continuously evolving AI technology and expert guidance, we ensure that your brand’s voice is heard in the crowded digital space. Join us to experience the future of content generation.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

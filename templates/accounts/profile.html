@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% block content %}
+<div class="w-100 animate-on-load">
+    <h2 class="text-center mb-4">User Profile</h2>
+    <div class="card mx-auto" style="max-width: 400px;">
+        <div class="card-body">
+            <p class="card-text"><strong>Username:</strong> {{ user.username }}</p>
+            <p class="card-text"><strong>Email:</strong> {{ user.email }}</p>
+            <!-- Additional user info can be added here -->
+            <div class="text-center mt-4">
+                <a href="{% url 'logout' %}" class="btn btn-danger btn-block">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

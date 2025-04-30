@@ -1,0 +1,48 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<section class="content-generation-section py-5" style="background: linear-gradient(135deg, #f0f9ff, #cbebff);">
+    <div class="container animate__animated animate__fadeInUp">
+        <h1 class="text-center mb-4">Content Generation</h1>
+        <form method="post" class="mb-4">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="prompt">Enter your prompt:</label>
+                <textarea name="prompt" id="prompt" class="form-control" rows="3" placeholder="e.g. give me content about software development">{{ user_prompt }}</textarea>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-lg">Generate</button>
+            </div>
+        </form>
+        {% if user_prompt %}
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">You:</h5>
+                <p class="card-text">{{ user_prompt }}</p>
+            </div>
+        </div>
+        {% endif %} {% if generated_text %}
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">DeepSeek:</h5>
+                <p class="card-text">{{ generated_text }}</p>
+                <button id="copyButton" class="btn btn-secondary">Copy Content</button>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<script>
+    // Copy-to-clipboard functionality
+    var copyButton = document.getElementById("copyButton");
+    if (copyButton) {
+        copyButton.addEventListener("click", function() {
+            var content = document.querySelector(".card-text").innerText;
+            navigator.clipboard.writeText(content).then(function() {
+                alert("Content copied to clipboard!");
+            }, function(err) {
+                alert("Failed to copy content.");
+            });
+        });
+    }
+</script>
+{% endblock %}

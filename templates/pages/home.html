@@ -1,0 +1,51 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<!-- Hero Section -->
+<section class="hero-section d-flex align-items-center text-center">
+    <div class="container">
+        <h1 class="display-4 text-white animate__animated animate__fadeInDown">Welcome to AI Content Generation Tool</h1>
+        <p class="lead text-white animate__animated animate__fadeInUp animate__delay-1s">
+            Revolutionize your content creation with powerful AI-driven solutions.
+        </p>
+        <a href="{% url 'content_generation' %}" class="btn btn-primary btn-lg mt-4 animate__animated animate__fadeInUp animate__delay-2s">Generate Content</a>
+
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Feature 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow border-0 animate__animated animate__zoomIn">
+                    <img src="{% static 'images/ai1.jpeg' %}" class="card-img-top" alt="AI-powered">
+                    <div class="card-body">
+                        <h5 class="card-title">AI-powered Content</h5>
+                        <p class="card-text">Tailor your copy with our AI that understands your brand voice.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Feature 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow border-0 animate__animated animate__zoomIn animate__delay-1s">
+                    <img src="{% static 'images/seo.jpeg' %}" class="card-img-top" alt="SEO Optimization">
+                    <div class="card-body">
+                        <h5 class="card-title">SEO Optimization</h5>
+                        <p class="card-text">Boost your organic traffic with optimized, smart content.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Feature 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow border-0 animate__animated animate__zoomIn animate__delay-2s">
+                    <img src="{% static 'images/marketing.jpeg' %}" class="card-img-top" alt="Digital Marketing">
+                    <div class="card-body">
+                        <h5 class="card-title">Digital Marketing</h5>
+                        <p class="card-text">Engage audiences with tailored campaigns and interactive content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

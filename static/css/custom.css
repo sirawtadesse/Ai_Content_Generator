@@ -1,0 +1,61 @@
+/* custom.css */
+
+body {
+    background: #f4f7fc;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+
+/* Adjust body padding if using fixed navbar */
+
+body {
+    padding-top: 70px;
+}
+
+
+/* Hero Section (Home page) */
+
+.hero-section {
+    background: linear-gradient(45deg, #5e72e4, #11cdef);
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+}
+
+
+/* Buttons */
+
+.btn-primary {
+    background-color: #fff;
+    color: #5e72e4;
+    border: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #e6e6e6;
+}
+
+
+/* Card Shadow Effect */
+
+.card {
+    border-radius: 10px;
+}
+
+
+/* Animate on load custom class (optional) */
+
+.animate-on-load {
+    animation: fadeInUp 0.8s;
+}
+
+
+/* Footer social icons hover effect */
+
+footer a.text-secondary:hover {
+    color: #5e72e4;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
